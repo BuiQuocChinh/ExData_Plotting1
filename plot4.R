@@ -30,9 +30,11 @@ plot(SubData$Time, SubData$Global_active_power, type= "l", lwd=1, ylab= "Global 
 plot(SubData$Time, SubData$Sub_metering_1, type="l", ylab= "Energy sub metering", xlab="")
 lines(SubData$Time, SubData$Sub_metering_2, type="l", col="red")
 lines(SubData$Time, SubData$Sub_metering_3, type="l", col="blue")
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=c("black", "red", "blue"))
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, bty="n", col=c("black", "red", "blue"))
+#legend("topright", lty = 1, bty = "n", cex = 0.5, col = c("Black", "Red", "Blue"),
+#       legend = c("Sub_metering_1        ", "Sub_metering_2        ", "Sub_metering_3        "))
 #plot 1,2
 plot(SubData$Time, SubData$Voltage, type="l", xlab="datetime", ylab="Voltage")   
 #Plot 2,2
-plot(SubData$Time, SubData$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")  
+plot(SubData$Time, SubData$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 dev.off()
